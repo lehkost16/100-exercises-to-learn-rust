@@ -2,8 +2,10 @@
 /// calculate the average speed of the journey.
 fn speed(start: u32, end: u32, time_elapsed: u32) -> u32 {
     // TODO: Panic with a custom message if `time_elapsed` is 0
-
-    (end - start) / time_elapsed
+    if time_elapsed == 0 {
+        panic!("The journey took no time at all. That's impossible!")
+    }
+    return (end - start) / time_elapsed;
 }
 
 #[cfg(test)]
@@ -21,6 +23,6 @@ mod tests {
     //    This is all part of Rust's built-in test framework!
     #[should_panic(expected = "The journey took no time at all. That's impossible!")]
     fn by_zero() {
-        speed(0, 10, 0);
+        let speed = speed(0, 10, 0);
     }
 }
