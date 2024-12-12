@@ -12,7 +12,7 @@ pub fn factorial(n: u32) -> u32 {
         sum = sum * i;
         i -= 1;
     }
-    return sum;
+    sum
 }
 
 #[cfg(test)]

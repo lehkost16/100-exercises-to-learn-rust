@@ -2,9 +2,9 @@
 fn is_even(n: u32) -> bool {
     // todo!()
     if n % 2 == 1 {
-        return false;
+        false
     } else {
-        return true;
+        true
     }
 }
 
